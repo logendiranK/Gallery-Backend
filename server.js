@@ -26,7 +26,7 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'gallery',
     allowed_formats: ['jpg', 'jpeg', 'png'],
-    transformation: [{ width: 800, height: 800, crop: 'limit' }],
+    // avoid transformation at upload time for faster response; transform on delivery if needed
   },
 });
 
